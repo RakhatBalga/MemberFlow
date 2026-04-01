@@ -170,6 +170,4 @@ The application uses [JSONPlaceholder](https://jsonplaceholder.typicode.com) as 
 
 ---
 
-## 📄 License
 
-This project is for educational and demonstration purposes.
