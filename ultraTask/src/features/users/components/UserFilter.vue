@@ -13,7 +13,7 @@ const userStore = useUserStore();
     <input
       v-model="userStore.searchQuery"
       type="text"
-      placeholder="Search users by name..."
+      placeholder="Search users by their names..."
       class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md bg-white focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-all shadow-sm"
     />
   </div>
