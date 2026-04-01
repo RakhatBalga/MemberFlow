@@ -4,27 +4,11 @@ import AppFooter from './components/layout/AppFooter.vue'
 </script>
 
 <template>
-  <div class="app">
+  <div class="min-h-screen flex flex-col">
     <AppHeader />
-    <main class="main-content">
+    <main class="flex-grow p-8 max-w-[1200px] mx-auto w-full">
       <router-view />
     </main>
     <AppFooter />
   </div>
 </template>
-
-<style scoped>
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-</style>
