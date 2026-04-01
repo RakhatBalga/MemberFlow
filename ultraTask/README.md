@@ -25,7 +25,6 @@ ultraTask/
 ├── public/
 ├── src/
 │   ├── api/                          # API layer
-│   │   ├── axios.ts                  # Axios instance configuration
 │   │   └── users.ts                  # User API endpoints
 │   ├── components/
 │   │   ├── layout/                   # Layout components
@@ -41,16 +40,14 @@ ultraTask/
 │   │       │   ├── UserTable.vue     # Users data table with delete action
 │   │       │   ├── UserFilter.vue    # Search/filter input
 │   │       │   └── UserForm.vue      # Create user form
-│   │       ├── composables/          # Feature composables
-│   │       │   └── useUserValidation.ts
+│   │       ├── composables/          # Feature composables (None current)
 │   │       └── types.ts              # User & CreateUserDto type definitions
 │   ├── router/
 │   │   └── index.ts                  # Route definitions
 │   ├── store/
 │   │   └── useUserStore.ts           # Pinia store (users state, CRUD actions, filtering)
 │   ├── views/
-│   │   ├── UsersView.vue             # Main users page
-│   │   └── UserEditView.vue          # User edit page
+│   │   └── UsersView.vue             # Main users page
 │   ├── App.vue                       # Root component
 │   ├── main.ts                       # Application entry point
 │   └── style.css                     # Global styles & Tailwind import

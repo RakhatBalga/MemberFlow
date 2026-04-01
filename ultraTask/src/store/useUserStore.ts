@@ -8,7 +8,8 @@ export const useUserStore = defineStore('users', () => {
     const loading = ref(false);
     const error = ref<string | null>(null);
 
-    const searchQuery = ref('');
+    
+    const searchQuery = ref(''); // users search
 
     const filteredUsers = computed(() => {
         if (!searchQuery.value) return users.value;
@@ -20,11 +21,11 @@ export const useUserStore = defineStore('users', () => {
     const fetchUsers = async () => {
         loading.value = true;
         try{
-            const response = await usersApi.getUsers();
-            users.value = response.data;
+            const response = await usersApi.getUsers(); //request 
+            users.value = response.data; //saving
         }
         catch (err) {
-            error.value = 'Failed to load users';
+            error.value = 'Failed to load users'; 
         } finally {
             loading.value = false;
         }

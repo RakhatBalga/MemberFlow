@@ -6,11 +6,11 @@ import UserFilter from '../features/users/components/UserFilter.vue';
 import UserForm from '../features/users/components/UserForm.vue';
 import Loader from '../components/ui/Loader.vue';
 
-const userStore = useUserStore();
+const userStore = useUserStore(); //access to store 
 const showForm = ref(false);
 
 onMounted(() => {
-  userStore.fetchUsers();
+  userStore.fetchUsers(); //loading users
 });
 </script>
 
@@ -27,9 +27,10 @@ onMounted(() => {
             Manage your team members and their account details.
           </p>
         </div>
-        <div class="mt-4 flex md:ml-4 md:mt-0">
+        <div class="mt-4 flex md:ml-4 md:mt-0"> <!-- button for users, button can be seen and unseen by clicking-->
           <button 
-            @click="showForm = !showForm"
+
+            @click="showForm = !showForm" 
             type="button" 
             class="ml-3 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
           >

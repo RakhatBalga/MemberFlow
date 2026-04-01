@@ -4,18 +4,18 @@ import { useUserStore } from '../../../store/useUserStore';
 
 const userStore = useUserStore();
 
-const formData = reactive({
+const formData = reactive({ //data from input
   name: '',
-  email: '',
+  email: '', 
   city: '',
 });
 
-const handleSubmit = async () => {
+const handleSubmit = async () => { //adding users, checking if name and email are filled
   if(formData.name && formData.email){
     await userStore.addUser({
       name: formData.name,
       email: formData.email,
-      username: formData.name.toLowerCase().replace(/\s/g, ''),
+      username: formData.name.toLowerCase().replace(/\s/g, ''), //creating username
       address: {
         street: '',
         suite: '',
@@ -23,7 +23,7 @@ const handleSubmit = async () => {
         zipcode: '',
       },
     });
-
+      //clearing the form 
     formData.name = '';
     formData.email = '';
     formData.city = '';
